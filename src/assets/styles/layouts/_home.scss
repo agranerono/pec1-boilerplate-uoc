@@ -98,7 +98,6 @@ body {
     align-items: center;
     text-align: justify;
 
-
     @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
       align-items: center;
@@ -151,12 +150,12 @@ body {
 }
 
 @media (min-width: $breakpoint-mobile) {
-
   .header {
     &-title {
       font-size: 2rem;
     }
   }
+  
   .section {
     padding: 1rem;
     margin: 0;
@@ -165,7 +164,6 @@ body {
       font-size: 1.8rem;
     }
   }
-  
 }
 
 @media (min-width: $breakpoint-tablet) {
@@ -180,6 +178,7 @@ body {
   .section {
     padding: 3rem 2rem;
     margin: 1rem;
+    
     &-title {
       font-size: 2rem;
     }

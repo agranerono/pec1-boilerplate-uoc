@@ -34,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  &-title {
+  &__title {
     font-size: 3rem;
     margin: 0;
     z-index: 1;
@@ -50,7 +50,7 @@ body {
   text-align: center;
   padding: 1rem 0;
 
-  .nav-list {
+  &__list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -59,13 +59,13 @@ body {
     align-items: center;
   }
   
-  .nav-item {
+  &__item {
     margin: 0 15px;
 
-    a {
+    & a {
       color: #fff;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 1.2rem;
 
       &:hover,
       &:focus {
@@ -91,8 +91,8 @@ body {
 .section {
   border-bottom: 2px solid lighten($color-primary, 30%);
 
-  &:nth-child(odd) .section-content,
-  &:nth-child(even) .section-content {
+  &:nth-child(odd) &__content,
+  &:nth-child(even) &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,7 +105,7 @@ body {
     }
   }
 
-  &:nth-child(even) .section-content {
+  &:nth-child(even) &__content {
     flex-direction: row-reverse;
 
     @media (max-width: $breakpoint-tablet) {
@@ -115,7 +115,7 @@ body {
     }
   }
 
-  &-title {
+  &__title {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -123,14 +123,14 @@ body {
     line-height: 1.2;
   }
 
-  &-content {
+  &__content {
     @media (max-width: $breakpoint-mobile) {
       flex-direction: column;
       text-align: center;
     }
   }
 
-  &-image {
+  &__image {
     max-width: 25rem; 
     min-width: 15rem; 
     width: 50%;
@@ -152,24 +152,26 @@ body {
 
 @media (min-width: $breakpoint-mobile) {
   .header {
-    &-title {
+    &__title {
       font-size: 2rem;
     }
   }
   
   .main-nav {
-    .nav-list {
-      .nav-item {
+      &__item {
         margin: 0 10px;
+
+        a {
+          font-size: 1rem;
+        }
       }
-    }
   }
 
   .section {
     padding: 1rem;
     margin: 0;
 
-    &-title {
+    &__title {
       font-size: 1.8rem;
     }
   }
@@ -179,24 +181,26 @@ body {
   .header {
     padding: 3rem 0;
 
-    &-title {
+    &__title {
       font-size: 3rem;
     }
   }
 
   .main-nav {
-    .nav-list {
-      .nav-item {
+      &__item {
         margin: 0 25px;
+
+        a {
+          font-size: 1rem;
+        }
       }
-    }
   }
 
   .section {
     padding: 3rem 2rem;
     margin: 1rem;
 
-    &-title {
+    &__title {
       font-size: 2rem;
     }
   }
@@ -204,15 +208,13 @@ body {
 
 @media (min-width: $breakpoint-desktop) {
   .main-nav {
-    .nav-list {
-      .nav-item {
+      &__item {
         margin: 0 25px;
 
         a {
           font-size: 1.2rem;
         }
       }
-    }
   }
 
   .section {
